@@ -189,7 +189,7 @@ def welcome():
     info=insert_csv1_DB()
     def insert_tableDB(det):
         table_name=det[1]
-        connector=mc.connect(host="localhost",user="root",passwd="michael1958")
+        connector=mc.connect(host="localhost",user="root",passwd="")
         curm=connector.cursor()
         if det[-1].upper()=="WEIGHTLOSS":
             curm.execute("use weightloss")
@@ -304,7 +304,7 @@ def modification_csv1_DB():
     
 def today_workout():
     print("_*_*_*_*_*_*_*_*TODAY'S WORKOUT_*_*_*_*_*_*_*_*")
-    mcc=mc.connect(host="localhost",user="root",passwd="michael1958")
+    mcc=mc.connect(host="localhost",user="root",passwd="")
     mys_cur=mcc.cursor()
     user=input("enter the user name to track activiity:")
     print()
@@ -550,7 +550,7 @@ def today_workout():
     handf_home()
     
 def activity_tracking():
-    mcc=mc.connect(host="localhost",user="root",passwd="michael1958")
+    mcc=mc.connect(host="localhost",user="root",passwd="")
     mys_cur=mcc.cursor()
     user=input("enter the user name to track activiity:")
     print()
@@ -651,7 +651,7 @@ def nutrition_ideas():
     handf_home()
 
 def authenticate_user(username, password):
-    csv_file_path = r"C:\Users\priya\OneDrive\Documents\projects\users.csv"
+    csv_file_path = r"path"
     with open(csv_file_path, 'r') as file:
         reader = csv.reader(file)
         for row in reader:
@@ -726,7 +726,7 @@ def analytics():
             db = i[-1]
             table = input_password
             
-            connection_params = {'host': 'localhost', 'user': 'root', 'password': 'michael1958', 'database': f"{db}"}
+            connection_params = {'host': 'localhost', 'user': 'root', 'password': <passcode>, 'database': f"{db}"}
             
          
             sql_query = f"SELECT date, sleep, water_intake FROM {table};"
@@ -776,7 +776,7 @@ def logout():
             print("****************************DELETING ALL THE DATA PERMANENTLY **************************")
             db=i[-1]
             table=p
-            mcc=mc.connect(host="localhost",user="root",passwd="michael1958")
+            mcc=mc.connect(host="localhost",user="root",passwd=<passcode>)
             mys_cur=mcc.cursor()
             mys_cur.execute(f"use {db};")
             mys_cur.execute(f"drop table {table}")
