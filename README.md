@@ -121,7 +121,7 @@ This project is **open-source**. Feel free to use, modify, and contribute!
 
 ## 📩 Contact
 
-🔹 **Developer**: ArtCode  
+🔹 **Developer**: priyadarshini k
 🔹 **Email**: mj.priyadarshini0207@gmail.com
 🔹 **GitHub**: GOLDEN-TOPEZ-RUBY
 
